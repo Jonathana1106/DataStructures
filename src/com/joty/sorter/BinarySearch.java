@@ -29,11 +29,12 @@ public class BinarySearch {
      */
     public int binarySearch(int arreglo[], int data) {
 	first = 0;
-	last = (arreglo.length);
+	last = ((arreglo.length) - 1);
 
 	while (first < last) {
 	    center = (int) ((first + last) / 2);
 	    centerValue = arreglo[center];
+
 	    if (data == centerValue) {
 		System.out.println("The searched element it's in the index: " + center);
 		return center;
