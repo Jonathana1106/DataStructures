@@ -7,7 +7,7 @@ package com.joty.sorter;
  * @author Jonathan
  *
  */
-public class LaucherSort {
+public class LauncherSort {
 
     /**
      * @param <T>
@@ -111,5 +111,24 @@ public class LaucherSort {
 	// quick.quickSort(arreglo);
 	// System.out.println("Arreglo Ordenado");
 	// quick.printL(arreglo);
+
+	// BinarySearch binary = new BinarySearch();
+	// SecuencialSearch secuencial = new SecuencialSearch();
+	//
+	// int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	// int data = 8;
+	//
+	// binary.binarySearch(array, data);
+	// secuencial.secuencialSearch(array, data);
+
+	// GenericSecuencialSearch secuencial = new GenericSecuencialSearch<>();
+	// Comparable[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	// int data = 6;
+	// String array2[] = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
+	// "l" };
+	// String data2 = "k";
+	//
+	// secuencial.genericSecuencialSearch(array, data);
+	// secuencial.genericSecuencialSearch(array2, data2);
     }
 }
