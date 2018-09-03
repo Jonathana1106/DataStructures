@@ -4,6 +4,8 @@
 package com.joty.pilas;
 
 /**
+ * Clase que se encarga de establecer los métodos que tendrá la Pila.
+ * 
  * @author Jonathan
  * @param <T>
  *
@@ -22,6 +24,7 @@ public class Pila<T> {
     }
 
     /**
+     * Método que se encarga de agregar datos a la pila.
      * 
      * @param data
      */
@@ -34,6 +37,7 @@ public class Pila<T> {
     }
 
     /**
+     * Método que se encarga de sacar datos de la pila.
      * 
      * @return
      */
@@ -46,6 +50,7 @@ public class Pila<T> {
     }
 
     /**
+     * Método que se encarga de obtener datos de la pila.
      * 
      * @return
      */
@@ -55,16 +60,17 @@ public class Pila<T> {
     }
 
     /**
+     * Método que se encarga de conocer el tamaño de la pila.
      * 
      * @return
      */
-    public int pilaLarge() {
+    protected int pilaLarge() {
 	System.out.println(size);
 	return size;
     }
 
     /**
-     * 
+     * Método que se encarga de limpiar la pila.
      */
     public void clearPila() {
 	while (top != null) {

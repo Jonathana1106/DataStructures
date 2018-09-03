@@ -4,6 +4,7 @@
 package com.joty.colas;
 
 /**
+ * Clase en la que se crean los métotos que tendrá ColaNode.
  * 
  * @author Jonathan
  * @param <T>

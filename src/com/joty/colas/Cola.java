@@ -4,6 +4,7 @@
 package com.joty.colas;
 
 /**
+ * Clase en la que se crean los métodos que tendrá la clase.
  * 
  * @author Jonathan
  * @param <T>
@@ -16,7 +17,7 @@ public class Cola<T> {
     private int size;
 
     /**
-     * 
+     * Método en el cual se inicializan el top, bottom y el tamaño de la cola.
      */
     public Cola() {
 	this.top = null;
@@ -25,6 +26,7 @@ public class Cola<T> {
     }
 
     /**
+     * Método que se encarga de agregar datos a la cola.
      * 
      * @param data
      */
@@ -41,6 +43,7 @@ public class Cola<T> {
     }
 
     /**
+     * Método que se encarga de obtener y eliminar datos de la cola.
      * 
      * @return
      */
@@ -53,6 +56,7 @@ public class Cola<T> {
     }
 
     /**
+     * Método que se encarga de obtener datos de la cola.
      * 
      * @return
      */
@@ -62,18 +66,27 @@ public class Cola<T> {
     }
 
     /**
+     * Método que se encarga de medir el tamaño de la cola.
      * 
      * @return
      */
-    public int colaLarge() {
+    protected int colaLarge() {
 	System.out.println(size);
 	return size;
     }
 
-    public boolean isEmpty() {
+    /**
+     * Método que se encarga de conocer si la cola se encuentra vacía o no.
+     * 
+     * @return
+     */
+    private boolean isEmpty() {
 	return buttom == null;
     }
 
+    /**
+     * Método que se encarga de limpiar la cola.
+     */
     public void colaClear() {
 	while (!isEmpty()) {
 	    dequeue();
