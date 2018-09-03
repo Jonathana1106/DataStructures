@@ -4,11 +4,14 @@
 package com.joty.sorter;
 
 /**
+ * Clase que implementa la búsqueda binaria.
+ * 
  * @author Jonathan
  *
  */
 public class BinarySearch {
 
+    // Variables de la clase
     private int center;
     private int first;
     private int last;
@@ -17,7 +20,14 @@ public class BinarySearch {
     public BinarySearch() {
     }
 
-    public int binarySeach(int arreglo[], int data) {
+    /**
+     * Método que se encarga de recibir un arreglo y un dato a buscar.
+     * 
+     * @param arreglo
+     * @param data
+     * @return
+     */
+    public int binarySearch(int arreglo[], int data) {
 	first = 0;
 	last = (arreglo.length);
 
