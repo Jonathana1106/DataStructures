@@ -1,21 +1,20 @@
+/**
+ * 
+ */
 package com.joty.sorter;
 
 /**
+ * Clase que se encarga de realizar un ordenamiento genérico mediante RadiSort.
  * 
- * @author Jonathan
+ * @author Jonathan G Araya
  *
  */
 public class GenericRadixSort<T extends Comparable<T>> {
-
-	private T i;
-	private T j;
-	private T x;
 
 	public GenericRadixSort() {
 	}
 
 	public void radixSort(T[] array) {
-
 	}
 
 	public void printL(String[] arreglo) {
