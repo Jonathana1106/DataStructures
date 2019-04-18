@@ -12,29 +12,52 @@ package com.joty.pilas;
  */
 public class PilaNode<T> {
 
-    private PilaNode<T> next;
-    private T data;
+	/**
+	 * Variables de la clase.
+	 */
+	private PilaNode<T> next;
+	private T data;
 
-    /**
-     * 
-     */
-    public PilaNode() {
-	this.next = null;
-    }
+	/**
+	 * Método que se encarga de inializar la clase.
+	 */
+	public PilaNode() {
+		this.next = null;
+	}
 
-    public PilaNode<T> getNext() {
-	return next;
-    }
+	/**
+	 * Método que se encarga de obtener el siguiente nodo de una pila.
+	 * 
+	 * @return
+	 */
+	public PilaNode<T> getNext() {
+		return next;
+	}
 
-    public void setNext(PilaNode<T> next) {
-	this.next = next;
-    }
+	/**
+	 * Método que se encarga de establecer el siguiente nodo de una pila.
+	 * 
+	 * @param next
+	 */
+	public void setNext(PilaNode<T> next) {
+		this.next = next;
+	}
 
-    public T getData() {
-	return data;
-    }
+	/**
+	 * Método que se encarga de obtener un dato del nodo de la pila.
+	 * 
+	 * @return
+	 */
+	public T getData() {
+		return data;
+	}
 
-    public void setData(T data) {
-	this.data = data;
-    }
+	/**
+	 * Método que se encarga de establecer el dato de un nodo de la pila.
+	 * 
+	 * @param data
+	 */
+	public void setData(T data) {
+		this.data = data;
+	}
 }
