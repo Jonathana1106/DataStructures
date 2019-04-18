@@ -6,35 +6,58 @@ package com.joty.colas;
 /**
  * Clase en la que se crean los métotos que tendrá ColaNode.
  * 
- * @author Jonathan
+ * @author Jonathan G Araya
  * @param <T>
  *
  */
 public class ColaNode<T> {
 
-    private ColaNode<T> next;
-    private T data;
+	/**
+	 * Variables de la clase.
+	 */
+	private ColaNode<T> next;
+	private T data;
 
-    /**
-     * 
-     */
-    public ColaNode() {
-	this.next = null;
-    }
+	/**
+	 * Método para inicializar una cola.
+	 */
+	public ColaNode() {
+		this.next = null;
+	}
 
-    public ColaNode<T> getNext() {
-	return next;
-    }
+	/**
+	 * Método que obtiene el siguiente nodo de la cola.
+	 * 
+	 * @return
+	 */
+	public ColaNode<T> getNext() {
+		return next;
+	}
 
-    public void setNext(ColaNode<T> next) {
-	this.next = next;
-    }
+	/**
+	 * Método que establece el siguiente nodo en una cola.
+	 * 
+	 * @param next
+	 */
+	public void setNext(ColaNode<T> next) {
+		this.next = next;
+	}
 
-    public T getData() {
-	return data;
-    }
+	/**
+	 * Método que obtiene el dato de un nodo.
+	 * 
+	 * @return
+	 */
+	public T getData() {
+		return data;
+	}
 
-    public void setData(T data) {
-	this.data = data;
-    }
+	/**
+	 * Método que establece el dato de un nodo.
+	 * 
+	 * @param data
+	 */
+	public void setData(T data) {
+		this.data = data;
+	}
 }
