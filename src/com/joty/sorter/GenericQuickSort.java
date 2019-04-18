@@ -44,7 +44,7 @@ public class GenericQuickSort<T extends Comparable<T>> {
 	private void quickSort(SimpleLL<T> arreglo, int first, int last) {
 		i = first;
 		j = last;
-		pivot = arreglo.getDatai((int) ((i + j) / 2));
+		pivot = arreglo.getDataIndex((int) ((i + j) / 2));
 
 		do {
 			while (arreglo.getData(i).compareTo(pivot) < 0) {
@@ -56,8 +56,8 @@ public class GenericQuickSort<T extends Comparable<T>> {
 			if (i <= j) {
 				/**************************************************************/
 				temp = arreglo.getData(i);
-				arreglo.setDatai(i, arreglo.getData(j));
-				arreglo.setDatai(j, temp);
+				arreglo.setDataIndex(i, arreglo.getData(j));
+				arreglo.setDataIndex(j, temp);
 				i++;
 				j--;
 				/***************************************************************/
