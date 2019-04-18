@@ -4,7 +4,7 @@
 package com.joty.pilas;
 
 /**
- * @author Jonathan G Araua
+ * @author Jonathan G Arayaa
  *
  */
 public class LauncherPilas {
@@ -15,7 +15,6 @@ public class LauncherPilas {
 	public static void main(String[] args) {
 
 		Pila<Object> pila = new Pila<>();
-
 		System.out.println("Ingresando datos.");
 		pila.push(1);
 		System.out.println("Obteniendo el tope.");

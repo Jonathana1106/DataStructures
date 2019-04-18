@@ -6,7 +6,7 @@ package com.joty.pilas;
 /**
  * Clase que se encarga de estableces los métodos para PilaNode.
  * 
- * @author Jonathan
+ * @author Jonathan G Araya
  * @param <T>
  *
  */
