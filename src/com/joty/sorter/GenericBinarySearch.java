@@ -4,12 +4,16 @@
 package com.joty.sorter;
 
 /**
+ * Clase que se encarga de realizar una búsqueda binaria genérica.
+ * 
  * @author Jonathan G Araya
  * @param <T>
  */
 public class GenericBinarySearch<T extends Comparable<T>> {
 
-	// Variables de la clase
+	/**
+	 * Variables de la clase.
+	 */
 	private int center;
 	private int first;
 	private int last;

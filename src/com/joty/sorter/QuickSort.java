@@ -4,6 +4,8 @@
 package com.joty.sorter;
 
 /**
+ * Clase que se encarga de realizar un ordenamiento mediante QuickSort.
+ * 
  * @author Jonathan G Araya
  *
  */

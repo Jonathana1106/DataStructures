@@ -6,6 +6,8 @@ package com.joty.sorter;
 import com.joty.listas.SimpleLL;
 
 /**
+ * Clase que se encarga de realizar un ordenamiento genérico mediante QuickSort.
+ * 
  * @author Jonathan G Araya
  *
  */

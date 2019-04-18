@@ -17,7 +17,7 @@ public class SecuencialSearch {
 	 * 
 	 * @param array sobre el que se va a realizar la búsqueda.
 	 * @param num   que se buscará en el arreglo.
-	 * @return
+	 * @return si el elemento ha sido encontrado.
 	 */
 	public int secuencialSearch(int array[], int num) {
 		int i = 0;

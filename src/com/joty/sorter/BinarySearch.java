@@ -11,7 +11,9 @@ package com.joty.sorter;
  */
 public class BinarySearch {
 
-	// Variables de la clase
+	/**
+	 * Variables de la clase.
+	 */
 	private int center;
 	private int first;
 	private int last;

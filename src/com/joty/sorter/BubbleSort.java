@@ -11,7 +11,9 @@ package com.joty.sorter;
  */
 public class BubbleSort {
 
-	// Variables de la clase.
+	/**
+	 * Variables de la clase.
+	 */
 	private int i;
 	private int j;
 	private int temp;

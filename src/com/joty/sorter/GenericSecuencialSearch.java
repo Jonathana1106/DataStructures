@@ -1,9 +1,11 @@
 /**
- * Clase generica que se encarga de realizar una búqueda secuencial.
+ * 
  */
 package com.joty.sorter;
 
 /**
+ * Clase que se encarga de realizar una búsqueda genérica secuencial.
+ * 
  * @author Jonathan G Araya
  * @param <T>
  *
