@@ -4,6 +4,8 @@
 package com.joty.sorter;
 
 /**
+ * Clase que se encarga de realizar un ordenamiento mediante ShellSort.
+ * 
  * @author Jonathan G Araya
  *
  */
@@ -27,21 +29,21 @@ public class ShellSort {
 	/**
 	 * Método que se encarga de realizar el ordenamiento por ShellSort.
 	 * 
-	 * @param arreglo a ordenar.
+	 * @param array a ordenar.
 	 */
-	public void shellSort(int[] arreglo) {
-		skip = (int) (arreglo.length / 2);
+	public void shellSort(int[] array) {
+		skip = (int) (array.length / 2);
 		while (skip > 0) {
-			for (i = skip; i < arreglo.length; i++) {
+			for (i = skip; i < array.length; i++) {
 				j = (i - skip);
 				while (j >= 0) {
 					k = (j + skip);
-					if (arreglo[j] <= arreglo[k]) {
+					if (array[j] <= array[k]) {
 						j = -1;
 					} else {
-						aux = arreglo[j];
-						arreglo[j] = arreglo[k];
-						arreglo[k] = aux;
+						aux = array[j];
+						array[j] = array[k];
+						array[k] = aux;
 						j -= skip;
 					}
 				}

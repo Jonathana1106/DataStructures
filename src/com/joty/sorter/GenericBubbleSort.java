@@ -7,6 +7,8 @@ import com.joty.listas.Node;
 import com.joty.listas.SimpleLL;
 
 /**
+ * Clase que se encarga de realizar un ordenamieno genérico mediante BubbleSort.
+ * 
  * @author Jonathan G Araya
  *
  */
@@ -26,18 +28,21 @@ public class GenericBubbleSort<T extends Comparable<T>> {
 	/**
 	 * Método que se encarga de realizar el ordenamiento por BubbleSort.
 	 * 
-	 * @param list sonbre la que ejecutará el ordenamiento.
+	 * @param array sonbre la que ejecutará el ordenamiento.
 	 */
-	public void bubbleSort(SimpleLL<T> list) {
-		for (int i = 0; i < list.getSize() - 1; i++) {
-			Node<T> aux = list.getHead();
-			Node<T> next = list.getHead().getNext();
-			for (int j = 1; j < list.getSize() - 1; j++) {
+	public void bubbleSort(SimpleLL<T> array) {
+		for (int i = 0; i < array.getSize() - 1; i++) {
+
+			Node<T> aux = array.getHead();
+			Node<T> next = array.getHead().getNext();
+
+			for (int j = 1; j < array.getSize() - 1; j++) {
 				if (aux.getData().compareTo(next.getData()) > 0) {
 					temp = aux.getData();
 					aux.setData(next.getData());
 					next.setData(temp);
 				}
+
 				aux = next;
 				next = next.getNext();
 			}
