@@ -4,7 +4,9 @@
 package com.joty.sorter;
 
 /**
- * Clase que se encarga de implementar la búsqueda secuencial.
+ * Clase que se encarga de implementar la búsqueda secuencial. Éste comprueba
+ * secuencialmente cada elemento de la lista para el valor objetivo hasta que es
+ * encontrado o hasta que todos los elementos hayan sido comparados.
  * 
  * @author Jonathan G Araya
  *

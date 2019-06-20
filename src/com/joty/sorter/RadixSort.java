@@ -50,22 +50,5 @@ public class RadixSort {
 			}
 			array = aux;
 		}
-		System.out.println("Arreglo Ordenado");
-		printL(array);
-	}
-
-	/**
-	 * Método que se encarga de imprimir en consola un arreglo.
-	 * 
-	 * @param arreglo
-	 */
-	public void printL(int[] arreglo) {
-		System.out.print("[");
-		for (int i = 0; i < arreglo.length - 1; i++) {
-			System.out.print(arreglo[i] + ", ");
-		}
-		System.out.print(arreglo[arreglo.length - 1]);
-		System.out.print("]");
-		System.out.println(" ");
 	}
 }

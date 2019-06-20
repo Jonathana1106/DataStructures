@@ -4,7 +4,11 @@
 package com.joty.sorter;
 
 /**
- * Clase que se encarga de implementar los métodos de BubbleSort.
+ * Clase que se encarga de implementar los métodos de BubbleSort. Funciona
+ * revisando cada elemento de la lista que va a ser ordenada con el siguiente,
+ * intercambiándolos de posición si están en el orden equivocado. Es necesario
+ * revisar varias veces toda la lista hasta que no se necesiten más
+ * intercambios, lo cual significa que la lista está ordenada.
  * 
  * @author Jonathan G Araya
  *
@@ -42,20 +46,5 @@ public class BubbleSort {
 				}
 			}
 		}
-	}
-
-	/**
-	 * Método que se encarga de imprimir un arreglo.
-	 * 
-	 * @param arreglo que va a imprimir en consola.
-	 */
-	public void printL(int[] arreglo) {
-		System.out.print("[");
-		for (int i = 0; i < arreglo.length - 1; i++) {
-			System.out.print(arreglo[i] + ", ");
-		}
-		System.out.print(arreglo[arreglo.length - 1]);
-		System.out.print("]");
-		System.out.println(" ");
 	}
 }

@@ -4,7 +4,28 @@
 package com.joty.sorter;
 
 /**
- * Clase que se encarga de realizar un ordenamiento mediante QuickSort.
+ * Clase que se encarga de realizar un ordenamiento mediante QuickSort. El
+ * algoritmo trabaja de la siguiente forma:
+ * 
+ * Elegir un elemento del arreglo de elementos a ordenar, al que llamaremos
+ * pivote.
+ * 
+ * Resituar los demás elementos de la lista a cada lado del pivote, de manera
+ * que a un lado queden todos los menores que él, y al otro los mayores.
+ * 
+ * Los elementos iguales al pivote pueden ser colocados tanto a su derecha como
+ * a su izquierda, dependiendo de la implementación deseada.
+ * 
+ * En este momento, el pivote ocupa exactamente el lugar que le corresponderá en
+ * la lista ordenada.
+ * 
+ * La lista queda separada en dos sublistas, una formada por los elementos a la
+ * izquierda del pivote, y otra por los elementos a su derecha.
+ * 
+ * Repetir este proceso de forma recursiva para cada sublista mientras éstas
+ * contengan más de un elemento.
+ * 
+ * Una vez terminado este proceso todos los elementos estarán ordenados.
  * 
  * @author Jonathan G Araya
  *
@@ -67,20 +88,5 @@ public class QuickSort {
 		if (i < last) {
 			quickSort(array, i, last);
 		}
-	}
-
-	/**
-	 * Método que se encarga de imprimir un arreglo en consola.
-	 * 
-	 * @param arreglo
-	 */
-	public void printL(int[] arreglo) {
-		System.out.print("[");
-		for (int i = 0; i < arreglo.length - 1; i++) {
-			System.out.print(arreglo[i] + ", ");
-		}
-		System.out.print(arreglo[arreglo.length - 1]);
-		System.out.print("]");
-		System.out.println(" ");
 	}
 }

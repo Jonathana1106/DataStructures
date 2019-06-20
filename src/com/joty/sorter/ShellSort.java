@@ -4,7 +4,23 @@
 package com.joty.sorter;
 
 /**
- * Clase que se encarga de realizar un ordenamiento mediante ShellSort.
+ * Clase que se encarga de realizar un ordenamiento mediante ShellSort. El Shell
+ * sort es una generalización del ordenamiento por inserción, teniendo en cuenta
+ * dos observaciones:
+ * 
+ * El ordenamiento por inserción es eficiente si la entrada está "casi
+ * ordenada".
+ * 
+ * El ordenamiento por inserción es ineficiente, en general, porque mueve los
+ * valores sólo una posición cada vez.
+ * 
+ * El algoritmo Shell sort mejora el ordenamiento por inserción comparando
+ * elementos separados por un espacio de varias posiciones. Esto permite que un
+ * elemento haga "pasos más grandes" hacia su posición esperada. Los pasos
+ * múltiples sobre los datos se hacen con tamaños de espacio cada vez más
+ * pequeños. El último paso del Shell sort es un simple ordenamiento por
+ * inserción, pero para entonces, ya está garantizado que los datos del vector
+ * están casi ordenados.
  * 
  * @author Jonathan G Araya
  *
@@ -50,20 +66,5 @@ public class ShellSort {
 			}
 			skip = (int) skip / 2;
 		}
-	}
-
-	/**
-	 * Método que se encarga de imprimir un arreglo en consola.
-	 * 
-	 * @param arreglo
-	 */
-	public void printL(int[] arreglo) {
-		System.out.print("[");
-		for (int i = 0; i < arreglo.length - 1; i++) {
-			System.out.print(arreglo[i] + ", ");
-		}
-		System.out.print(arreglo[arreglo.length - 1]);
-		System.out.print("]");
-		System.out.println(" ");
 	}
 }

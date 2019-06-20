@@ -3,10 +3,18 @@
  */
 package com.joty.sorter;
 
-import com.joty.listas.SimpleLL;
-
 /**
  * Clase que se encarga de realizar un ordenamiento mediante MergeSort.
+ * Conceptualmente, el ordenamiento por mezcla funciona de la siguiente manera:
+ * 
+ * Si la longitud de la lista es 0 ó 1, entonces ya está ordenada.
+ * 
+ * En otro caso: Dividir la lista desordenada en dos sublistas de
+ * aproximadamente la mitad del tamaño.
+ * 
+ * Ordenar cada sublista recursivamente aplicando el ordenamiento por mezcla.
+ * 
+ * Mezclar las dos sublistas en una sola lista ordenada.
  * 
  * @author Jonathan G Araya
  *
@@ -14,82 +22,83 @@ import com.joty.listas.SimpleLL;
 public class MergeSort {
 
 	/**
-	 * 
+	 * Método que se encarga de inicializar la clase.
 	 */
 	public MergeSort() {
 	}
 
-	@SuppressWarnings({ "unused", "rawtypes", "unchecked" })
-	private SimpleLL mergeSort(SimpleLL array) {
-
-		SimpleLL left = new SimpleLL();
-		SimpleLL right = new SimpleLL();
-		SimpleLL result = new SimpleLL();
-
-		if (array.getSize() < 1) {
-			return array;
-		} else {
-			int p = array.getSize() / 2;
-
-			for (int i = 0; i < p; i++) {
-				left.add(array.getDataIndex(i));
-			}
-			for (int j = p + 1; j < array.getSize(); j++) {
-				right.add(array.getDataIndex(j));
-			}
-
-			mergeSort(left);
-			mergeSort(right);
-
-			if ((int) left.getData(p - 1) <= (int) right.getData(p + 1)) {
-				for (int i = 0; i < right.getSize(); i++) {
-					left.add(right.getData(i));
-				}
-				return left;
-			}
-			result = merge(left, right);
-			return result;
-		}
-	}
-
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private SimpleLL merge(SimpleLL left, SimpleLL right) {
-		SimpleLL result = new SimpleLL();
-
-		while (left.getSize() > 0 && right.getSize() > 0) {
-			if ((int) left.getData(0) <= (int) right.getData(0)) {
-				result.add(left.getData(0));
-				left.deleteValue(0);
-			} else {
-				result.add(right.getData(0));
-				right.deleteValue(0);
-			}
-		}
-		if (left.getSize() > 0) {
-			for (int i = 0; i < left.getSize(); i++) {
-				result.add(left.getDataIndex(i));
-			}
-		}
-		if (right.getSize() > 0) {
-			for (int i = 0; i < right.getSize(); i++) {
-				result.add(right.getDataIndex(i));
-			}
-		}
-		return result;
+	/**
+	 * Método que se encarga de recibir un array a ordenar por MergeSort.
+	 * 
+	 * @param array a ordenar.
+	 */
+	public void mergeSort(int[] array) {
+		sort(array, 0, array.length - 1);
 	}
 
 	/**
-	 * Método que se encarga de imprimir un arreglo en consola.
+	 * Método que se encarga de separar el array original en dos subarrays.
 	 * 
-	 * @param arreglo
+	 * @param array a separar.
+	 * @param left  del array.
+	 * @param right del array.
 	 */
-	public void printL(int[] arreglo) {
-		System.out.print("[");
-		for (int i = 0; i < arreglo.length - 1; i++) {
-			System.out.print(arreglo[i] + ", ");
+	private void sort(int array[], int left, int right) {
+		if (left < right) {
+			int m = (left + right) / 2;
+
+			sort(array, left, m);
+			sort(array, m + 1, right);
+
+			merge(array, left, m, right);
 		}
-		System.out.print(arreglo[arreglo.length - 1]);
-		System.out.print("]");
-		System.out.println(" ");
+	}
+
+	/**
+	 * Método que se encarga de hacer la mezcla de los arrays y ordenarlos.
+	 * 
+	 * @param array
+	 * @param left
+	 * @param mmiddle
+	 * @param right
+	 */
+	private void merge(int array[], int left, int mmiddle, int right) {
+
+		int sizeL = mmiddle - left + 1;
+		int sizeR = right - mmiddle;
+
+		int leftArray[] = new int[sizeL];
+		int rightArray[] = new int[sizeR];
+
+		for (int i = 0; i < sizeL; ++i)
+			leftArray[i] = array[left + i];
+		for (int j = 0; j < sizeR; ++j)
+			rightArray[j] = array[mmiddle + 1 + j];
+
+		int i = 0, j = 0;
+
+		int k = left;
+		while (i < sizeL && j < sizeR) {
+			if (leftArray[i] <= rightArray[j]) {
+				array[k] = leftArray[i];
+				i++;
+			} else {
+				array[k] = rightArray[j];
+				j++;
+			}
+			k++;
+		}
+
+		while (i < sizeL) {
+			array[k] = leftArray[i];
+			i++;
+			k++;
+		}
+
+		while (j < sizeR) {
+			array[k] = rightArray[j];
+			j++;
+			k++;
+		}
 	}
 }
